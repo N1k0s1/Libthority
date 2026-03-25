@@ -163,7 +163,7 @@ export default function SignIn({ visible, onClose, onSubmit }: SignInProps) {
                   style={styles.input}
                   value={name}
                   onChangeText={setName}
-                  placeholder="Full Name"
+                  placeholder="First Name + First letter of Last Name (eg. John D)"
                   placeholderTextColor="#999"
                   autoCapitalize="words"
                 />
