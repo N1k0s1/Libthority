@@ -156,14 +156,14 @@ export default function SignIn({ visible, onClose, onSubmit }: SignInProps) {
             ) : step === 'NAME_INPUT' ? (
               <>
                 <Text style={styles.subtitle}>
-                  Please enter your full name.
+                  First Name + First letter of Last Name (eg. John D)
                 </Text>
                 
                 <TextInput
                   style={styles.input}
                   value={name}
                   onChangeText={setName}
-                  placeholder="First Name + First letter of Last Name (eg. John D)"
+                  placeholder="John D"
                   placeholderTextColor="#999"
                   autoCapitalize="words"
                 />
