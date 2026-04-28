@@ -8,9 +8,6 @@ This is a sign-in portal developed for the Sacred Heart College library, as my N
 - Works with a library scanner to scan Student ID's!
 - Runs on an iPad/Android Tablet perfectly!
 
-## To-Dos
-- The backend! I also want to make an admin portal too and make a version which any school can use for sign-in's/sign-out's!
-
 ## Future roadmap
 - Custom dashboard for schools to update their own version!
 - Possibly putting it on the App Store if there's enough demand!
@@ -19,7 +16,7 @@ This is a sign-in portal developed for the Sacred Heart College library, as my N
 
 - **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/SHC-Library-Signin.git
+   git clone https://github.com/N1k0s1/SHC-Library-Signin.git
    cd SHC-Library-Signin
    ```
 
