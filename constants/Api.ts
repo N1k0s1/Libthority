@@ -41,6 +41,7 @@ export const API_ENDPOINTS = {
   STUDENT_STATUS: (studentId: string) =>
     `${API_BASE_URL}/api/student/status/${studentId}`,
 
+  BACKGROUND_IMAGE: `${API_BASE_URL}/api/config/background-image`,
   HEALTH: `${API_BASE_URL}/health`, // Note: You might need to add a health endpoint to server.js if it doesn't exist
   ADMIN_LOGIN: `${API_BASE_URL}/api/login`, // Changed from /api/auth/login to match server.js routes
   ADMIN_DASHBOARD: `${API_BASE_URL}/api/admin/dashboard`, // This might not exist in server.js, check routes

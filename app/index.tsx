@@ -1,5 +1,1 @@
-import { Redirect } from 'expo-router';
-
-export default function Index() {
-  return <Redirect href="/librarysignin" />;
-}
+export { default } from '@/components/screens/IndexRedirect';
