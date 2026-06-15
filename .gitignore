@@ -38,3 +38,6 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
+# migration plan (local only)
+MIGRATION-PLAN.md

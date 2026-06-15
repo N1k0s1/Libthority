@@ -89,6 +89,15 @@ class ApiService {
   }
 
   /**
+   * Get background image configuration
+   */
+  async getBackgroundImage(): Promise<ApiResponse<{ url: string | null }>> {
+    return this.makeRequest(API_ENDPOINTS.BACKGROUND_IMAGE, {
+      method: 'GET',
+    });
+  }
+
+  /**
    * Health check
    */
   async checkHealth(): Promise<ApiResponse> {
