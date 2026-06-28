@@ -6,22 +6,25 @@
 import { Platform } from 'react-native';
 
 // API Base URL Configuration
+// LAN IP of the machine running the local backend (api/server.js on :3000).
+// Physical iPads/Android devices on the same Wi‑Fi reach the backend here.
+// Override with EXPO_PUBLIC_API_URL if your IP changes.
+const LOCAL_API_URL =
+  process.env.EXPO_PUBLIC_API_URL ?? 'http://10.0.139.202:3000';
+
 const getApiBaseUrl = (): string => {
-  // If you want to test against the local server in development, uncomment the following lines:
-  /*
   if (__DEV__) {
-    // Development environment
+    // Development: talk to the local backend.
     if (Platform.OS === 'android') {
-      // Android emulator uses 10.0.2.2 to access localhost
-      return 'http://10.0.2.2:3000';
-    } else {
-      // iOS simulator and web can use localhost
-      return 'http://localhost:3000';
+      // Android emulator maps host localhost to 10.0.2.2. A physical Android
+      // device should use the LAN IP instead — set EXPO_PUBLIC_API_URL.
+      return process.env.EXPO_PUBLIC_API_URL ?? 'http://10.0.2.2:3000';
     }
+    // iOS simulator / web / physical iPad use the LAN IP (works everywhere).
+    return LOCAL_API_URL;
   }
-  */
-  
-  // Use the deployed Heroku backend for both Development and Production
+
+  // Use the deployed Heroku backend for production builds.
   return 'https://shc-library-backend-f661ae1b6b59.herokuapp.com';
 };
 

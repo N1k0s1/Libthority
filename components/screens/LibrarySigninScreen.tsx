@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import ConnectionStatus from '@/components/ConnectionStatus';
 import DebugPanel from '@/components/DebugPanel';
@@ -44,6 +44,13 @@ export default function LibrarySigninScreen() {
         onSubmit={handleSignInSubmit}
       />
 
+      <View style={styles.footer} pointerEvents="none">
+        <Text style={styles.footerText}>
+          A Libthority product. About: built and maintained by Libthority.
+        </Text>
+        <Text style={styles.footerText}>© {new Date().getFullYear()} Libthority. All rights reserved.</Text>
+      </View>
+
       <ConnectionStatus position="bottom" />
       <DebugPanel />
     </View>
@@ -59,5 +66,18 @@ const styles = StyleSheet.create({
     gap: 20,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 12,
+    left: 0,
+    right: 0,
+    alignItems: 'center',
+    paddingHorizontal: 16,
+  },
+  footerText: {
+    color: 'rgba(255, 255, 255, 0.8)',
+    fontSize: 12,
+    textAlign: 'center',
   },
 });
