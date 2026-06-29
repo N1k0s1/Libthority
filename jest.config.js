@@ -7,6 +7,9 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
+  transform: {
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.jest.json' }],
+  },
   testMatch: ['<rootDir>/__tests__/**/*.test.ts'],
   clearMocks: true,
   collectCoverageFrom: ['services/**/*.ts'],
