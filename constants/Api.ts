@@ -24,8 +24,9 @@ const getApiBaseUrl = (): string => {
     return LOCAL_API_URL;
   }
 
-  // Use the deployed Heroku backend for production builds.
-  return 'https://shc-library-backend-f661ae1b6b59.herokuapp.com';
+  // Use the deployed Vercel backend (Supabase DB) for production builds.
+  // Override with EXPO_PUBLIC_API_URL to point at a different backend.
+  return process.env.EXPO_PUBLIC_API_URL ?? 'https://shc-library-new-backend.vercel.app';
 };
 
 export const API_BASE_URL = getApiBaseUrl();
