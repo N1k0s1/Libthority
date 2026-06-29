@@ -36,5 +36,14 @@ If you're having any problems, check the following is correct, and feel free to 
    - For mobile testing, install the [Expo Go](https://expo.dev/client) app on your device, otherwise you'll need to create a development build through EAS
 
 
+## Testing
+
+Run the test suite before committing any code:
+
+```sh
+npm test            # run all tests
+npm run test:coverage   # run with coverage report
+```
+
 ## URL
 You can check out the website [here!](https://library.launders.money) (https://library.launders.money)
