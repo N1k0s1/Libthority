@@ -9,6 +9,8 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "expo lint",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "dev": "node scripts/dev-start.js",
     "dev:concurrent": "concurrently \"npm run backend:dev\" \"npm run expo:dev\" --names \"API,EXPO\" --prefix-colors \"blue,magenta\"",
     "backend:dev": "cd backend && npm run dev",
